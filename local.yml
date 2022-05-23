@@ -1,0 +1,19 @@
+- hosts: localhost
+  tasks:
+  - name: Brew packages
+    import_tasks: tasks/brew-packages.yml
+    tags:
+      - brew
+      - setup
+
+  - name: Setup asdf
+    import_tasks: tasks/asdf-setup.yml
+    tags:
+      - asdf
+      - setup
+
+  - name: Setup oh-my-zsh
+    import_tasks: tasks/oh-my-zsh-setup.yml
+    tags:
+      - oh-my-zsh
+      - setup

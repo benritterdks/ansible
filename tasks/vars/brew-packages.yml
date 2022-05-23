@@ -1,0 +1,38 @@
+---
+brew_taps:
+  - cloudfoundry/tap
+  - conduktor/brew
+  - starkandwayne/cf
+brew_cask_packages:
+  - brave-browser
+  - clipy
+  - conduktor
+  - dbeaver-community
+  - docker
+  - gimp
+  - iterm2
+  - jetbrains-toolbox
+  - lastpass
+  - microsoft-azure-storage-explorer
+  - obsidian
+  - postman
+  - scroll-reverser
+  - sourcetree
+  - sublime-text
+  - visual-studio-code
+brew_packages:
+  - ansible
+  - ansible-lint
+  - azure-cli
+  - cf-cli
+  - git
+  - gradle
+  - jq
+  - kotlin
+  - maven
+  - node
+  - ripgrep
+  - starkandwayne/cf/safe
+  - tmux
+  - vault
+  - wrk

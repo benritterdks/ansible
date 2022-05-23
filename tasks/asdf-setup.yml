@@ -1,0 +1,9 @@
+---
+- name: Install java plugin
+  ansible.builtin.shell: asdf plugin-add java
+
+- name: Install JDK 11
+  ansible.builtin.shell: asdf install java temurin-11.0.15+10
+
+- name: Install JDK 17
+  ansible.builtin.shell: asdf install java temurin-17.0.3+7

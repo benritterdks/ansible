@@ -1,0 +1,18 @@
+---
+- name: Oh-My-Zsh
+  shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+
+- name: Install zsh-autosuggestions
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+- name: Install zsh-syntax-highlighting
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+- name: Install zsh-nvm
+  ansible.builtin.git:
+    repo: 'git clone https://github.com/lukechilds/zsh-nvm'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-nvm"
