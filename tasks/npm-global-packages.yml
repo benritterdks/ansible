@@ -1,0 +1,5 @@
+---
+- name: Install yarn globally
+  community.general.npm:
+    name: yarn
+    global: yes

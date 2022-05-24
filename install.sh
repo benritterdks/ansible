@@ -21,3 +21,15 @@ brew install ansible
 # Install community.general collection
 echo "Installing community.general..."
 ansible-galaxy collection install community.general
+
+echo "\nPlaybook can be run with setup tag now\n\n"
+
+# Selfservice install
+echo "The following need to be installed with Self Service:"
+echo "\tMicrosoft Word"
+echo "\tMicrosoft Excel"
+echo "\tMicrosoft OneNote"
+echo "\tMicrosoft Teams"
+echo "\tMicrosoft Outlook"
+echo "\tMicrosoft Remote Desktop"
+echo "\tOneDrive"

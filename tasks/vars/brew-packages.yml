@@ -25,12 +25,14 @@ brew_packages:
   - ansible-lint
   - azure-cli
   - cf-cli
+  - gh
   - git
   - gradle
   - jq
   - kotlin
   - maven
   - node
+  - python
   - ripgrep
   - starkandwayne/cf/safe
   - tmux
