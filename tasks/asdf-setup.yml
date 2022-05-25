@@ -1,9 +1,27 @@
 ---
 - name: Install java plugin
-  ansible.builtin.shell: asdf plugin-add java
+  ansible.builtin.command: asdf plugin-add java
+  register: install_plugin_output
+  changed_when: install_plugin_output != 0
+
+- name: Install java plugin output
+  ansible.builtin.debug:
+    var: install_plugin_output.stdout_lines
 
 - name: Install JDK 11
-  ansible.builtin.shell: asdf install java temurin-11.0.15+10
+  ansible.builtin.command: asdf install java temurin-11.0.15+10
+  register: install_jdk_11_output
+  changed_when: install_jdk_11_output != 0
+
+- name: Install jdk 11 output
+  ansible.builtin.debug:
+    var: install_jdk_11_output.stdout_lines
 
 - name: Install JDK 17
-  ansible.builtin.shell: asdf install java temurin-17.0.3+7
+  ansible.builtin.command: asdf install java temurin-17.0.3+7
+  register: install_jdk_17_output
+  changed_when: install_jdk_17_output != 0
+
+- name: Install jdk 17 output
+  ansible.builtin.debug:
+    var: install_jdk_17_output.stdout_lines
