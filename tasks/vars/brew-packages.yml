@@ -13,6 +13,7 @@ brew_casks:
   - jetbrains-toolbox
   - lastpass
   - microsoft-azure-storage-explorer
+  - mqtt-explorer
   - obsidian
   - postman
   - scroll-reverser
@@ -21,6 +22,7 @@ brew_casks:
   - visual-studio-code
 brew_packages:
   - ansible
+  - asdf
   - azure-cli
   - cf-cli
   - gh

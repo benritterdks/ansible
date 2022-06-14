@@ -1,4 +1,6 @@
 ---
+# need to add asdf install step here
+
 - name: Install java plugin
   ansible.builtin.command: asdf plugin-add java
   register: install_plugin_output
