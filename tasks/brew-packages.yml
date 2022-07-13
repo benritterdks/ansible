@@ -21,6 +21,7 @@
   register: result
   until: result is successful
   tags:
+    - brew
     - brew-update
 
 - name: Homebrew | Install Homebrew Packages

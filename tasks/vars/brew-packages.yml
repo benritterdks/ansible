@@ -13,13 +13,14 @@ brew_casks:
   - jetbrains-toolbox
   - lastpass
   - microsoft-azure-storage-explorer
-  - mqtt-explorer
   - obsidian
   - postman
   - scroll-reverser
   - sourcetree
+  - spotify
   - sublime-text
   - visual-studio-code
+  - vysor
 brew_packages:
   - ansible
   - asdf
@@ -27,6 +28,7 @@ brew_packages:
   - cf-cli
   - gh
   - git
+  - go
   - gradle
   - jq
   - kotlin
@@ -37,4 +39,5 @@ brew_packages:
   - starkandwayne/cf/safe
   - tmux
   - vault
+  - watchman
   - wrk

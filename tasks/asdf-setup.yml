@@ -27,3 +27,30 @@
 - name: Install jdk 17 output
   ansible.builtin.debug:
     var: install_jdk_17_output.stdout_lines
+
+- name: Install nodejs plugin
+  ansible.builtin.command: asdf plugin-add nodejs
+  register: install_plugin_output
+  changed_when: install_plugin_output != 0
+
+- name: Install nodejs plugin output
+  ansible.builtin.debug:
+    var: install_plugin_output.stdout_lines
+
+- name: Install nodejs lts
+  ansible.builtin.command: asdf install nodejs lts
+  register: install_nodejs_lts_output
+  changed_when: install_nodejs_lts_output != 0
+
+- name: Install nodejs lts output
+  ansible.builtin.debug:
+    var: install_nodejs_lts_output.stdout_lines
+
+- name: Set nodejs lts asdf global
+  ansible.builtin.command: asdf global nodejs lts
+  register: asdf_global_nodejs
+  changed_when: asdf_global_nodejs != 0
+
+- name: Set nodejs lts asdf global output
+  ansible.builtin.debug:
+    var: asdf_global_nodejs.stdout_lines
