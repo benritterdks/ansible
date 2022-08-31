@@ -12,12 +12,6 @@
       - asdf
       - setup
 
-  - name: Setup nvm
-    import_tasks: tasks/nvm-setup.yml
-    tags:
-      - nvm
-      - setup
-
   - name: Setup oh-my-zsh
     import_tasks: tasks/oh-my-zsh-setup.yml
     tags:

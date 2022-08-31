@@ -22,7 +22,7 @@
   until: result is successful
   tags:
     - brew
-    - brew-update
+    - update
 
 - name: Homebrew | Install Homebrew Packages
   community.general.homebrew:

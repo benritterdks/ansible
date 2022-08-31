@@ -8,17 +8,12 @@ brew_casks:
   - conduktor
   - dbeaver-community
   - docker
-  - firefox
   - iterm2
   - jetbrains-toolbox
   - lastpass
   - microsoft-azure-storage-explorer
-  - obsidian
   - postman
-  - scroll-reverser
   - sourcetree
-  - spotify
-  - sublime-text
   - visual-studio-code
   - vysor
 brew_packages:
@@ -26,6 +21,7 @@ brew_packages:
   - asdf
   - azure-cli
   - cf-cli
+  - dotnet-sdk
   - gh
   - git
   - go
@@ -35,9 +31,6 @@ brew_packages:
   - maven
   - node
   - python
-  - ripgrep
   - starkandwayne/cf/safe
-  - tmux
   - vault
   - watchman
-  - wrk

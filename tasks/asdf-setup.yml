@@ -1,10 +1,22 @@
 ---
-# need to add asdf install step here
+- name: Update asdf plugins
+  ansible.builtin.command: asdf plugin update --all
+  register: asdf_plugin_update
+  tags: 
+    - update
+
+- name: Update asdf plugins output
+  ansible.builtin.debug:
+    var: asdf_plugin_update.stdout_lines
+  tags: 
+    - update
 
 - name: Install java plugin
   ansible.builtin.command: asdf plugin-add java
   register: install_plugin_output
-  changed_when: install_plugin_output != 0
+  failed_when:
+    - install_plugin_output.rc != 0
+    - "'already added' not in install_plugin_output.stderr"
 
 - name: Install java plugin output
   ansible.builtin.debug:
@@ -29,9 +41,11 @@
     var: install_jdk_17_output.stdout_lines
 
 - name: Install nodejs plugin
-  ansible.builtin.command: asdf plugin-add nodejs
+  ansible.builtin.command: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   register: install_plugin_output
-  changed_when: install_plugin_output != 0
+  failed_when:
+    - install_plugin_output.rc != 0
+    - "'already added' not in install_plugin_output.stderr"
 
 - name: Install nodejs plugin output
   ansible.builtin.debug:
@@ -54,3 +68,4 @@
 - name: Set nodejs lts asdf global output
   ansible.builtin.debug:
     var: asdf_global_nodejs.stdout_lines
+
