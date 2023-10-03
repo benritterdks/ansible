@@ -2,13 +2,13 @@
 - name: Update asdf plugins
   ansible.builtin.command: asdf plugin update --all
   register: asdf_plugin_update
-  tags: 
+  tags:
     - update
 
 - name: Update asdf plugins output
   ansible.builtin.debug:
     var: asdf_plugin_update.stdout_lines
-  tags: 
+  tags:
     - update
 
 - name: Install java plugin
@@ -69,3 +69,22 @@
   ansible.builtin.debug:
     var: asdf_global_nodejs.stdout_lines
 
+- name: Install python plugin
+  ansible.builtin.command: asdf plugin-add python
+  register: install_plugin_output
+  failed_when:
+    - install_plugin_output.rc != 0
+    - "'already added' not in install_plugin_output.stderr"
+
+- name: Install python plugin output
+  ansible.builtin.debug:
+    var: install_plugin_output.stdout_lines
+
+- name: Install python 3.11
+  ansible.builtin.command: asdf install python 3.11
+  register: install_python_3_output
+  changed_when: install_python_3_output != 0
+
+- name: Install python 3.11 output
+  ansible.builtin.debug:
+    var: install_python_3_output.stdout_lines

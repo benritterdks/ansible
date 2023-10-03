@@ -9,11 +9,9 @@ brew_casks:
   - dbeaver-community
   - docker
   - iterm2
-  - jetbrains-toolbox
   - lastpass
   - microsoft-azure-storage-explorer
   - postman
-  - sourcetree
   - visual-studio-code
   - vysor
 brew_packages:
@@ -25,6 +23,7 @@ brew_packages:
   - gh
   - git
   - go
+  - golangci-lint
   - gradle
   - jq
   - kotlin
