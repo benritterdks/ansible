@@ -1,11 +1,9 @@
 ---
 brew_taps:
   - cloudfoundry/tap
-  - conduktor/brew
   - starkandwayne/cf
 brew_casks:
   - clipy
-  - conduktor
   - dbeaver-community
   - docker
   - iterm2
@@ -22,14 +20,11 @@ brew_packages:
   - dotnet-sdk
   - gh
   - git
-  - go
-  - golangci-lint
   - gradle
   - jq
   - kotlin
   - maven
-  - node
-  - python
   - starkandwayne/cf/safe
+  - stunnel
   - vault
   - watchman
