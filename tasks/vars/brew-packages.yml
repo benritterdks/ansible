@@ -5,11 +5,18 @@ brew_taps:
 brew_casks:
   - clipy
   - dbeaver-community
+  - deskpad
   - docker
+  - firefox
   - iterm2
   - lastpass
   - microsoft-azure-storage-explorer
+  - miniconda
   - postman
+  - rectangle
+  - scroll-reverser
+  - spotify
+  - sublime-text
   - visual-studio-code
   - vysor
 brew_packages:
@@ -18,13 +25,16 @@ brew_packages:
   - azure-cli
   - cf-cli
   - dotnet-sdk
-  - gh
   - git
   - gradle
   - jq
   - kotlin
   - maven
+  - ripgrep
   - starkandwayne/cf/safe
+  - stow
   - stunnel
+  - tldr
+  - tmux
   - vault
   - watchman
